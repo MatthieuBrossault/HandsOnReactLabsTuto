@@ -1,5 +1,5 @@
-# HandOnReactLabATuto
-HandOnReact Lab A React-Typescript Tutorial
+# HandsOnReactLabsTuto
+HandsOnReact Labs React-Typescript Tutorial
 
 Follows : https://handsonreact.com/docs/labs/react-tutorial-typescript
 

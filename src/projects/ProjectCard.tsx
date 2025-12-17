@@ -1,3 +1,4 @@
+import { Link } from 'react-router';
 import type { Project } from './Project';
 
 function formatDescription(description: string): string {
@@ -19,11 +20,13 @@ function ProjectCard({ project, onEdit }: ProjectCardProps) {
     <div className="card">
       <img src={project.imageUrl} alt={project.name} />
       <section className="section dark">
-        <h5 className="strong">
-          <strong>{project.name}</strong>
-        </h5>
-        <p>{formatDescription(project.description)}</p>
-        <p>Budget : {project.budget.toLocaleString("en-US", { style: 'currency', currency: 'USD' })}</p>
+        <Link to={'/projects/' + project.id}>
+          <h5 className="strong">
+            <strong>{project.name}</strong>
+          </h5>
+          <p>{formatDescription(project.description)}</p>
+          <p>Budget : {project.budget.toLocaleString("en-US", { style: 'currency', currency: 'USD' })}</p>
+        </Link>
         <button className="bordered"
           onClick={() => handleEditClick(project)}>
           <span className="icon-edit " />
